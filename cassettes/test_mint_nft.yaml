@@ -1,0 +1,51 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      user-agent:
+      - python-httpx/0.27.0
+    method: GET
+    uri: https://catfact.ninja/fact
+  response:
+    body:
+      string: '{"fact":"Normal body temperature for a cat is 102 degrees F.","length":51}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - no-cache, private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '74'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 12 Aug 2024 15:23:50 GMT
+      Server:
+      - nginx
+      Set-Cookie:
+      - XSRF-TOKEN=eyJpdiI6InNTNlFHTDN4dExNdkdlQ3R5WDJUQkE9PSIsInZhbHVlIjoiRnhKYXBpdDVBVEYrdkMwVW5vNC8rcTNlZy8vNit4dVZGSlRySGNvZk8rRVFEdUh5eEM5MDhzcENpM09kTkNMMC9FMjZhNGJiYU5ucXFsR1dtOGM4NEVqSXR5aEQ3WHZnU3htdHpHM3ZtZXdrK1JmUmUyemcvdFFLUFBNYk1rSGgiLCJtYWMiOiJhM2JlNjI1ZjRiZDEzODZiMmY5OTI1YjQ1OTk2N2Q1OTIwMzUwYTA1YTE1ZjVlNDIxYTE0NzFmYTg5YTU5MTIyIiwidGFnIjoiIn0%3D;
+        expires=Mon, 12-Aug-2024 17:23:50 GMT; Max-Age=7200; path=/; secure; samesite=lax
+      - catfacts_session=eyJpdiI6ImcyOERsdkR1VXJqTFNIckhNSWtVeWc9PSIsInZhbHVlIjoiZDhEWTkydi9XbXhiT0pGdFR4OXpQbWV0TDdVdDFLUXJiQVkrakQrV2hFVHVEUEF0QUhGUFV5QVZzR253ejVlL3NxZEg0bTU0Q3JPQWZXeHpLc1phMnFtblZzc2RtWUJqamxNMHhqWE04RzRNVVFuNXJGYTlxU1FtRDlOQ3UyUWQiLCJtYWMiOiIyNDAxODY3NDhhM2EzNWJmZWQ0ZTljM2YxOWQyYzAxNDhmZGVkYjNhY2RlY2I2MGQ1MWZjNGM1NDdlNDkyOTQ5IiwidGFnIjoiIn0%3D;
+        expires=Mon, 12-Aug-2024 17:23:50 GMT; Max-Age=7200; path=/; httponly; samesite=lax
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ratelimit-Limit:
+      - '100'
+      X-Ratelimit-Remaining:
+      - '99'
+      X-XSS-Protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+version: 1
