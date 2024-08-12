@@ -1,18 +1,18 @@
 from fastapi import FastAPI, HTTPException
 import httpx
+import redis
 
 app = FastAPI()
 
-nfts = {}
 
 
 @app.get("/{id}")
 def get_nft(id: str):
-    global nfts
-    r = nfts.get(id)
+    db = redis.Redis(host='localhost', port=6379, db=0)
+    r = db.get(id)
     if not r:
         raise HTTPException(status_code=404, detail="Item not found")
-    return r
+    return {"text": r}
 
 
 def get_cat_fact():
@@ -22,5 +22,5 @@ def get_cat_fact():
 
 @app.post("/add/{item_id}")
 def mint_nft(item_id: str):
-    global nfts
-    nfts[item_id] = {"text": get_cat_fact()}
+    db = redis.Redis(host='localhost', port=6379, db=0)
+    db.set(item_id, get_cat_fact())
